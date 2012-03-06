@@ -1,7 +1,7 @@
 ### UTILITY METHODS ###
 
 def create_visitor
-  @visitor ||= { :name => "Testy McUserton", :email => "example@example.com",
+  @visitor ||= { :name => "Testy McUserton", :email => "example@example.com", :zip => "00000",
     :password => "please", :password_confirmation => "please" }
 end
 
@@ -19,7 +19,7 @@ end
 def create_user
   create_visitor
   delete_user
-  @user = FactoryGirl.create(:user, email: @visitor[:email])
+  @user = FactoryGirl.create(:user, email: @visitor[:email], zip: @visitor[:zip])
 end
 
 def delete_user
@@ -32,6 +32,7 @@ def sign_up
   visit '/users/sign_up'
   fill_in "Name", :with => @visitor[:name]
   fill_in "Email", :with => @visitor[:email]
+  fill_in "Zip", :with => @visitor[:zip]
   fill_in "Password", :with => @visitor[:password]
   fill_in "Password confirmation", :with => @visitor[:password_confirmation]
   click_button "Sign up"
@@ -124,6 +125,8 @@ end
 When /^I edit my account details$/ do
   click_link "Edit account"
   fill_in "Name", :with => "newname"
+  fill_in "Email", :with => @visitor[:email]
+  fill_in "Zip", :with => :zip
   fill_in "Current password", :with => @visitor[:password]
   click_button "Update"
 end
