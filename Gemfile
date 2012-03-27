@@ -14,7 +14,6 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 gem "rspec-rails", ">= 2.8.1", :group => [:development, :test]
 gem "database_cleaner", ">= 0.7.1", :group => :test
 gem "mongoid-rspec", ">= 1.4.4", :group => :test
-gem "machinist", :group => :test
 gem "factory_girl_rails", ">= 1.7.0", :group => :test
 gem "email_spec", ">= 1.2.1", :group => :test
 gem "cucumber-rails", ">= 1.3.0", :group => :test
@@ -24,7 +23,7 @@ gem "guard", ">= 0.6.2", :group => :development
 case HOST_OS
   when /darwin/i
     gem 'rb-fsevent', :group => :development
-    gem 'growl', :group => :development
+    gem "growl", "~> 1.0.3", :group => :development
   when /linux/i
     gem 'libnotify', :group => :development
     gem 'rb-inotify', :group => :development
@@ -33,6 +32,7 @@ case HOST_OS
     gem 'win32console', :group => :development
     gem 'rb-notifu', :group => :development
 end
+
 gem "guard-bundler", ">= 0.1.3", :group => :development
 gem "guard-rails", ">= 0.0.3", :group => :development
 gem "guard-livereload", ">= 0.3.0", :group => :development

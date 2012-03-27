@@ -8,5 +8,5 @@
 puts 'EMPTY THE MONGODB DATABASE'
 Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
 puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :name => 'First User', :email => 'user@example.com', :zip => '', :password => 'please', :password_confirmation => 'please', :confirmed_at => DateTime.now
+user = User.create! :name => 'Charlie', :email => 'charlie@signaldesign.net', :password => 'MakeUp767$', :password_confirmation => 'MakeUp767$'
 puts 'New user created: ' << user.name
