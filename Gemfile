@@ -11,7 +11,6 @@ end
 gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem "coffeekup_rails", "~> 0.0.1"
 gem "rspec-rails", ">= 2.8.1", :group => [:development, :test]
 gem "database_cleaner", ">= 0.7.1", :group => :test
 gem "mongoid-rspec", ">= 1.4.4", :group => :test
