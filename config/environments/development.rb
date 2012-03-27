@@ -24,7 +24,7 @@ TestThree::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "example.com",
+    domain: "signaldesign.net",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["charliejmagee"],
@@ -35,6 +35,9 @@ TestThree::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+
+  # show log files from thin
+  config.middleware.use Rails::Rack::LogTailer
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
