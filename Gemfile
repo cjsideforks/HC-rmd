@@ -21,6 +21,8 @@ gem "capybara", ">= 1.1.2", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
 gem "guard", ">= 0.6.2", :group => :development  
 
+gem 'rb-fsevent', :group => :development
+gem "growl", "~> 1.0.3", :group => :development
 
 gem "guard-bundler", ">= 0.1.3", :group => :development
 gem "guard-rails", ">= 0.0.3", :group => :development
