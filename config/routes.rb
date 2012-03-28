@@ -1,4 +1,4 @@
-TestThree::Application.routes.draw do
+HCtest::Application.routes.draw do
   
 
   root :to => "home#index"

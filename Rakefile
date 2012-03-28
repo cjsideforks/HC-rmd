@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-TestThree::Application.load_tasks
+HCtest::Application.load_tasks
